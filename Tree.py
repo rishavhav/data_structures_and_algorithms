@@ -4,6 +4,7 @@ class Node:
         self.left = None
         self.right = None
 
+
 class BinarySearchTree:
     def __init__(self):
         self.root = None
@@ -37,8 +38,6 @@ class BinarySearchTree:
         if value > current_node.value:
             current_node.right = self.__r_insert(current_node.right, value)
 
-
-
     def r_contains(self, value):
         return self.__r_contains(self.root, value)
 
@@ -56,9 +55,9 @@ class BinarySearchTree:
         if current_node is None:
             return None
         if value < current_node.value:
-            current_node.left =  self.__r_delete(current_node.left, value)
+            current_node.left = self.__r_delete(current_node.left, value)
         if value > current_node.value:
-            current_node.right =  self.__r_delete(current_node.right, value)
+            current_node.right = self.__r_delete(current_node.right, value)
         else:
             if current_node.left is None and current_node.right is None:
                 return None
@@ -72,7 +71,6 @@ class BinarySearchTree:
                 return self.__r_delete(current_node.right, min_value)
         return current_node
 
-
     def r_delete(self, value):
         return self.__r_delete(self.root, value)
 
@@ -82,7 +80,7 @@ class BinarySearchTree:
             self.root = new_node
             return True
         temp = self.root
-        while (True):
+        while True:
             if new_node.value == temp.value:
                 return False
             if new_node.value < temp.value:
@@ -97,7 +95,6 @@ class BinarySearchTree:
                 temp = temp.right
 
 
-
 my_tree = BinarySearchTree()
 print(my_tree.root)
 
@@ -108,8 +105,8 @@ my_tree.insert(3)
 print(my_tree.root.value)
 print(my_tree.root.left.value)
 
-print('===contains===')
+print("===contains===")
 print(my_tree.r_contains(3))
 
-print('===insert===')
+print("===insert===")
 my_tree.r_insert(34)

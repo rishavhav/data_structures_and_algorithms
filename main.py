@@ -6,13 +6,13 @@
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    print(f"Hi, {name}")  # Press Ctrl+F8 to toggle the breakpoint.
 
 
 # Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    class Car:
+if __name__ == "__main__":
 
+    class Car:
         def __init__(self, make, model, year):
             self.make = make
             self.model = model
@@ -35,13 +35,11 @@ if __name__ == '__main__':
         def increment_odometer(self, miles):
             self.odometer_reading += miles
 
-
     class ElectricCar(Car):
         def __init__(self, make, model, year, battery_size):
             super().__init__(make, model, year)
             self.battery_size = battery_size
 
-
-    my_leaf = ElectricCar('nissan', 'leaf', 2024, '10000hz')
+    my_leaf = ElectricCar("nissan", "leaf", 2024, "10000hz")
     print(my_leaf.get_descriptive_name())
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

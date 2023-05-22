@@ -33,7 +33,7 @@ class LinkedList:
             return None
         temp = self.head
         pre = self.head
-        while (temp.next):
+        while temp.next:
             pre = temp
             temp = temp.next
         self.tail = pre
@@ -132,26 +132,25 @@ class LinkedList:
         return slow
 
 
-
 my_linked_list = LinkedList(1)
 my_linked_list.append(10)
 my_linked_list.print_list()
-print('length is: ' + str(my_linked_list.length))
+print("length is: " + str(my_linked_list.length))
 
 my_linked_list.pop()
 my_linked_list.print_list()
-print('length is: ' + str(my_linked_list.length))
+print("length is: " + str(my_linked_list.length))
 
 my_linked_list.pop()
 my_linked_list.print_list()
-print('length is: ' + str(my_linked_list.length))
+print("length is: " + str(my_linked_list.length))
 
 my_linked_list.prepend(10)
 my_linked_list.prepend(20)
 
 my_linked_list.print_list()
 
-print('popped first number: ' + str(my_linked_list.pop_first()))
+print("popped first number: " + str(my_linked_list.pop_first()))
 my_linked_list.print_list()
 
 my_linked_list.append(40)
@@ -162,27 +161,27 @@ print(my_linked_list.get(2).value)
 my_linked_list.set_value(2, 43)
 print(my_linked_list.get(2).value)
 
-print('===========LL==============')
+print("===========LL==============")
 my_linked_list.print_list()
 
-print('===========LL==============')
+print("===========LL==============")
 my_linked_list.insert(1, 49)
 my_linked_list.print_list()
 
 
-print('===========LL remove==============')
+print("===========LL remove==============")
 my_linked_list.remove(2)
 my_linked_list.print_list()
 
-print('===========LL==============')
+print("===========LL==============")
 print(my_linked_list.head.value)
 print(my_linked_list.tail.value)
 print(my_linked_list.length)
 
-print('===========LL reverse==============')
+print("===========LL reverse==============")
 my_linked_list.print_list()
 my_linked_list.reverse()
 my_linked_list.print_list()
 
-print('=============LL middle=================')
+print("=============LL middle=================")
 print(my_linked_list.find_middle_node().value)
